@@ -17,12 +17,15 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "db:introspect": "prisma2 introspect",
+    "db:generate": "prisma2 generate"
   },
   "dependencies": {
     "@nestjs/common": "^7.0.1",
     "@nestjs/core": "^7.0.1",
     "@nestjs/platform-express": "^7.0.1",
+    "@prisma/client": "^2.0.0-alpha.910",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2"
   },
@@ -42,6 +45,7 @@
     "eslint-plugin-import": "^2.20.1",
     "jest": "^25.1.0",
     "prettier": "^1.19.1",
+    "prisma2": "^2.0.0-preview024",
     "supertest": "^4.0.2",
     "ts-jest": "^25.2.1",
     "ts-loader": "^6.2.1",

@@ -7,6 +7,9 @@
     "client",
     "server"
   ],
+  "repository": {
+    "url": "https://github.com/danilofuchs/todo-app"
+  },
   "private": true,
   "license": "MIT"
 }

@@ -1,0 +1,14 @@
+## NOT WORKING YET
+
+version: "3.7"
+
+services:
+  db:
+    container_name: todo-app-db_2
+    build:
+      dockerfile: ./Dockerfile
+      context: ./db
+    environment:
+      MYSQL_ROOT_PASSWORD: batata
+    ports:
+      - 3306:3306
