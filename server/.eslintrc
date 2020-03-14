@@ -1,0 +1,6 @@
+{
+  "extends": ["@ebanx/eslint-config-nba"],
+  "env": {
+    "jest": true
+  }
+}

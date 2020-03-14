@@ -1,0 +1,12 @@
+{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "Todo app with GraphQL and Prisma2 support",
+  "main": "server.ts",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "private": true,
+  "license": "MIT"
+}
