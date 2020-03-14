@@ -1,7 +1,7 @@
 {
   "name": "todo-app",
   "version": "1.0.0",
-  "description": "Todo app with GraphQL and Prisma2 support",
+  "description": "React todo app using GraphQL, Apollo Client, NestJS and Prisma2",
   "main": "server.ts",
   "workspaces": [
     "client",
