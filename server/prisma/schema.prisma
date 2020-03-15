@@ -10,7 +10,7 @@ datasource db {
 model Todo {
   completedAt DateTime?
   createdAt   DateTime
-  description String?
+  description String
   id          Int       @default(autoincrement()) @id
   updatedAt   DateTime
 }
