@@ -8,7 +8,9 @@ datasource db {
 }
 
 model Todo {
-  completed_at DateTime?
-  description  String?
-  id           Int       @default(autoincrement()) @id
+  completedAt DateTime?
+  createdAt   DateTime
+  description String?
+  id          Int       @default(autoincrement()) @id
+  updatedAt   DateTime
 }

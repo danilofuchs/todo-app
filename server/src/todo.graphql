@@ -1,0 +1,21 @@
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type Query {
+    todo(id: Int!): Todo
+}
+
+type Mutation {
+    createTodo(description: String!): Todo
+}
+
+type Todo {
+    id: Int!
+    description: String
+    completed: Boolean!
+    completedAt: String
+    createdAt: String!
+    updatedAt: String!
+}
