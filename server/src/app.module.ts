@@ -10,7 +10,10 @@ import { TodoModule } from "./todo/todo.module";
         GraphQLModule.forRoot({
             typePaths: ["./**/*.graphql"],
             definitions: {
-                path: path.join(process.cwd(), "src/graphql.generated.ts"),
+                path: path.join(
+                    process.cwd(),
+                    "../shared/interfaces/graphql.ts"
+                ),
                 outputAs: "class",
             },
         }),

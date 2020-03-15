@@ -5,7 +5,8 @@
   "main": "server.ts",
   "workspaces": [
     "client",
-    "server"
+    "server",
+    "shared"
   ],
   "repository": {
     "url": "https://github.com/danilofuchs/todo-app"

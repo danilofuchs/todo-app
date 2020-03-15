@@ -1,6 +1,6 @@
 import { Injectable } from "@nestjs/common";
 import { PrismaClient, Todo } from "@prisma/client";
-import { Todo as DomainTodo } from "../graphql.generated";
+import { Todo as DomainTodo } from "shared/interfaces/graphql";
 const prisma = new PrismaClient();
 
 @Injectable()
