@@ -17,6 +17,13 @@ export class TodoService {
         return entityToDomain(todo);
     }
 
+    async getAll(): Promise<DomainTodo[]> {
+        const todos = await prisma.todo.findMany({
+            first: 100,
+        });
+        return todos.map(entityToDomain);
+    }
+
     async createTodo(props: { description: string }) {
         const todo = await prisma.todo.create({
             data: {

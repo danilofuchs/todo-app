@@ -4,11 +4,15 @@ schema {
 }
 
 type Query {
-    todo(id: Int!): Todo
+    todos: [Todo]
+}
+
+input CreateTodoInput {
+    description: String!
 }
 
 type Mutation {
-    createTodo(description: String!): Todo
+    createTodo(input: CreateTodoInput): Todo
 }
 
 type Todo {

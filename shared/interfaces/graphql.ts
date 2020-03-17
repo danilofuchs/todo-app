@@ -6,12 +6,16 @@
 
 /* tslint:disable */
 /* eslint-disable */
+export class CreateTodoInput {
+    description: string;
+}
+
 export abstract class IMutation {
-    abstract createTodo(description: string): Todo | Promise<Todo>;
+    abstract createTodo(input?: CreateTodoInput): Todo | Promise<Todo>;
 }
 
 export abstract class IQuery {
-    abstract todo(id: number): Todo | Promise<Todo>;
+    abstract todos(): Todo[] | Promise<Todo[]>;
 }
 
 export class Todo {
