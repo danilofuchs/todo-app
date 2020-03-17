@@ -28,8 +28,6 @@ export class TodoService {
         const todo = await prisma.todo.create({
             data: {
                 description: props.description,
-                createdAt: new Date().toISOString(),
-                updatedAt: new Date().toISOString(),
             },
         });
         return entityToDomain(todo);
@@ -38,9 +36,8 @@ export class TodoService {
 
 const entityToDomain = (entity: Todo): DomainTodo => ({
     ...entity,
-    createdAt: entity.createdAt.toISOString() ?? undefined,
-    updatedAt: entity.updatedAt.toISOString() ?? undefined,
-    completedAt: entity.completedAt?.toISOString() ?? undefined,
+    createdAt: entity.createdAt.toISOString(),
+    updatedAt: entity.updatedAt.toISOString(),
+    completedAt: entity.completedAt?.toISOString(),
     completed: !!entity.completedAt,
-    description: entity.description ?? undefined,
 });

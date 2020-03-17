@@ -9,8 +9,8 @@ datasource db {
 
 model Todo {
   completedAt DateTime?
-  createdAt   DateTime
+  createdAt   DateTime  @default(now())
   description String
   id          Int       @default(autoincrement()) @id
-  updatedAt   DateTime
+  updatedAt   DateTime  @default(now())
 }
